@@ -4,12 +4,13 @@ importScripts('https://www.gstatic.com/firebasejs/9.0.0/firebase-messaging-compa
 
 // Initialize the Firebase app in the service worker by passing the generated config
 const firebaseConfig = {
-  apiKey: "AIzaSyAjWIJe9AaL6fDZVn9tRajF-BUexEPFZyA",
-  authDomain: "react-notif-40228.firebaseapp.com",
-  projectId: "react-notif-40228",
-  storageBucket: "react-notif-40228.appspot.com",
-  messagingSenderId: "790644971731",
-  appId: "1:790644971731:web:dc0c5d007d2b961af3dc26"
+  apiKey: "AIzaSyBEqSZdB3qTeSTyycvYDgJ5qG-5Xg9rQZY",
+  authDomain: "chatkitty-example.firebaseapp.com",
+  databaseURL: "https://chatkitty-example.firebaseio.com",
+  projectId: "chatkitty-example",
+  storageBucket: "chatkitty-example.appspot.com",
+  messagingSenderId: "540634290949",
+  appId: "1:540634290949:web:cd754ff7e98087230ff56c"
 };
 
 firebase.initializeApp(firebaseConfig);

@@ -1,16 +1,28 @@
 import logo from './logo.svg';
 import './App.css';
-import {useState} from 'react';
+import {useEffect, useState} from 'react';
 import { fetchToken, onMessageListener } from './firebase';
 import {Button, Toast} from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import chatkitty from "./chatkitty.js";
 
 function App() {
 
   const [show, setShow] = useState(false);
   const [notification, setNotification] = useState({title: '', body: ''});
   const [isTokenFound, setTokenFound] = useState(false);
-  fetchToken(setTokenFound);
+
+  const initialize = async () => {
+    const result = await chatkitty.startSession({ username: 'c6f75947-af48-4893-a78e-0e0b9bd68580'});
+
+    console.log(result);
+
+    fetchToken(setTokenFound);
+  }
+
+  useEffect(() => {
+    initialize().then();
+  }, [])
 
   onMessageListener().then(payload => {
     setNotification({title: payload.notification.title, body: payload.notification.body})
@@ -48,7 +60,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <Button onClick={() => onShowNotificationClicked()}>Show Toast</Button>
       </header>
-      
+
     </div>
   );
 }
