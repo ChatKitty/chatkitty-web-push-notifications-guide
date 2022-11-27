@@ -4,7 +4,7 @@ This is an example [React](https://github.com/facebook/create-react-app) app tha
 
 ## Getting Started
 
-ℹ️  You will need a ChatKitty account to set up the User Received Notification chat function and retrieve your ChatKitty credentials from the [Chatkitty dashboard](https://dashboard.chatkitty.com/. You will also use the ChatKitty Dashboard to add Firebase as a chat runtime dependency. Next, you also need a Firebase account to create a [Firebase project](https://console.firebase.google.com/) as we wil be using Firebase as our push notification provider. 
+ℹ️  You will need a ChatKitty account to set up the User Received Notification chat function and retrieve your ChatKitty credentials from the [ChatKitty dashboard](https://dashboard.chatkitty.com/). You will also use the ChatKitty Dashboard to add Firebase as a chat runtime dependency. Next, you also need a Firebase account to create a [Firebase project](https://console.firebase.google.com/) as we wil be using Firebase as our push notification provider. 
 
 Then, install all dependencies using the following command:
 
@@ -48,4 +48,4 @@ Lastly, in `app.js` replace the user's information with users from your own app:
 
 ## Testing Push Notifications
 
-To test whether push notifications work, allow notification permission on your browser. Then, send a message to the user. You should now see a received message notification. You can use the [ChatKitty Demo](https://demo.chatkitty.com/) to send messages.
+To test if push notifications work, allow notification permission on your browser. Then, send a message to the user. You should now see a received message notification. 
